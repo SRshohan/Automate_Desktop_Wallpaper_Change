@@ -2,15 +2,15 @@ import os
 import random
 import ctypes
 # specifying path of the wallpapers folder
-path = r"C:\Users\Sohanur Rahman\Pictures\Wallpaper"
+path = r"your path"
 # getting list of files from the folder
 wallpapers = os.listdir(path)
-# removing unnecessary files from the folder
+# removing unnecessary files from the folder if they exist in the folder
 final_wallpapers=[]
 for wall in wallpapers:
   if ".ini" not in wall:
      final_wallpapers.append(wall)
-# selecting a random wallpaper
+# selecting a random wallpaper from the directory path
 random_wallpaper = final_wallpapers[random.randint(0,len(final_wallpapers)-1)]
 # getting absolute path of the selected wallpaper
 random_wallpaper = os.path.join(path,random_wallpaper)
